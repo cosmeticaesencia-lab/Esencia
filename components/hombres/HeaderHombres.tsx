@@ -7,13 +7,6 @@ type HeaderHombresProps = {
   brandName?: string;
 };
 
-function scrollToPricing() {
-  document.getElementById("pricing-section-hombres")?.scrollIntoView({
-    behavior: "smooth",
-    block: "center",
-  });
-}
-
 export default function HeaderHombres({ brandName = "ESENCIA" }: HeaderHombresProps) {
   const [scrolled, setScrolled] = useState(false);
 
@@ -33,29 +26,13 @@ export default function HeaderHombres({ brandName = "ESENCIA" }: HeaderHombresPr
         scrolled ? "border-gray-100 shadow-md" : "shadow-none"
       }`}
     >
-      <div className="mx-auto flex h-11 w-full max-w-7xl items-center justify-between px-4 sm:h-12 md:px-6 lg:px-8">
+      <div className="mx-auto flex h-11 max-w-7xl items-center px-4 sm:h-12 md:px-6 lg:px-8">
         <Link
           href="/hombres"
           className="font-heading text-lg font-semibold uppercase tracking-[0.12em] text-text sm:text-xl"
         >
           {brandName}
         </Link>
-
-        <div className="flex items-center gap-3 sm:gap-4">
-          <Link
-            href="/"
-            className="hidden text-xs font-medium text-text-muted transition-colors hover:text-[var(--h-primary-dark)] sm:inline sm:text-sm"
-          >
-            Ver mujeres
-          </Link>
-          <button
-            type="button"
-            onClick={scrollToPricing}
-            className="rounded-full bg-[var(--h-primary)] px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wide text-white transition-colors hover:bg-[var(--h-primary-hover)] sm:px-4 sm:py-2 sm:text-xs"
-          >
-            Comprar
-          </button>
-        </div>
       </div>
     </header>
   );

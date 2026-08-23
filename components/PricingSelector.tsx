@@ -107,11 +107,9 @@ export default function PricingSelector({
         whileTap={{ scale: 0.97 }}
         transition={{ type: "spring", stiffness: 400, damping: 20 }}
         onClick={onPurchase}
-        className="w-full max-w-full rounded-full bg-primary px-3 py-3.5 text-xs font-bold uppercase tracking-wide text-white shadow-sm sm:py-4 sm:text-sm"
+        className="w-full max-w-full rounded-full bg-primary px-3 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-sm sm:py-4 sm:text-base"
       >
-        <span className="block truncate">
-          Comprar — {formatPrice(selectedOption.totalPrice)}
-        </span>
+        Comprar
       </motion.button>
     </div>
   );
