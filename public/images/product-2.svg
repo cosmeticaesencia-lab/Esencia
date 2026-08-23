@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Producto  vista lateral">
+  <defs>
+    <linearGradient id="g2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8DFF5"/>
+      <stop offset="100%" stop-color="#C9B8E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g2)"/>
+  <rect x="240" y="140" width="120" height="320" rx="20" fill="#fff" opacity="0.85"/>
+  <text x="300" y="560" text-anchor="middle" fill="#2D2D2D" font-family="sans-serif" font-size="22" opacity="0.5">Vista 2</text>
+</svg>

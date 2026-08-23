@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" fill="none">
+  <rect width="300" height="450" fill="#E8E0E0"/>
+  <rect x="300" width="300" height="450" fill="#D4C4C4"/>
+  <circle cx="150" cy="180" r="70" fill="#8B7355" opacity="0.35"/>
+  <circle cx="450" cy="180" r="85" fill="#6B5344" opacity="0.45"/>
+  <text x="150" y="400" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Antes</text>
+  <text x="450" y="400" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="16" font-weight="600">Después</text>
+  <line x1="300" y1="0" x2="300" y2="450" stroke="#FFFFFF" stroke-width="3"/>
+</svg>

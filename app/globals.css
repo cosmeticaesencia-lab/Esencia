@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #e8a5c4;
+    --color-primary-light: #f5d0e0;
+    --color-primary-dark: #d484a8;
+    --color-lilac: #c9b8e8;
+    --color-lilac-light: #e8dff5;
+    --color-text: #2d2d2d;
+    --color-text-muted: #6b7280;
+    --color-background: #ffffff;
+    --color-surface: #fafafa;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background font-sans text-text antialiased;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-text;
+  }
+}

@@ -1,0 +1,39 @@
+import AnnouncementBar from "@/components/AnnouncementBar";
+import Header from "@/components/Header";
+import type { Metadata } from "next";
+import { Inter, Poppins } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Landing",
+  description: "Landing page de producto",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="es">
+      <body className={`${inter.variable} ${poppins.variable}`}>
+        <AnnouncementBar />
+        <Header />
+        {children}
+      </body>
+    </html>
+  );
+}

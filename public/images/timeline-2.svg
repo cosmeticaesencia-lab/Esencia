@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  <rect x="280" y="120" width="240" height="260" rx="16" fill="#E8DFF5"/>
+  <rect x="310" y="150" width="180" height="200" rx="12" fill="#C9B8E8" opacity="0.6"/>
+  <text x="400" y="420" text-anchor="middle" fill="#6B7280" font-family="system-ui,sans-serif" font-size="18">2 Meses</text>
+</svg>
