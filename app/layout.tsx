@@ -1,5 +1,3 @@
-import AnnouncementBar from "@/components/AnnouncementBar";
-import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
@@ -30,8 +28,6 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${inter.variable} ${poppins.variable}`}>
-        <AnnouncementBar />
-        <Header />
         {children}
       </body>
     </html>
