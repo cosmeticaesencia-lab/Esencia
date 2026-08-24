@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 type Review = {
@@ -9,6 +10,7 @@ type Review = {
   name: string;
   initials: string;
   avatarColor: string;
+  avatar: string;
   rating: number;
   text: string;
   timeAgo: string;
@@ -20,6 +22,7 @@ const REVIEWS: Review[] = [
     name: "Valentina R.",
     initials: "VR",
     avatarColor: "#E8A5C4",
+    avatar: "/images/resena-mujer-1.jpeg",
     rating: 5,
     text: "Le tenía fe pero no tanta, la verdad. A las 3 semanas empecé a notar menos pelo en la almohada y eso ya me tranquilizó bastante. Sigo usándolo todos los días.",
     timeAgo: "Hace 3 horas",
@@ -29,6 +32,7 @@ const REVIEWS: Review[] = [
     name: "Camila S.",
     initials: "CS",
     avatarColor: "#C9B8E8",
+    avatar: "/images/resena-mujer-2.jpeg",
     rating: 5,
     text: "Lo que más me sorprendió es que no deja el pelo grasoso, lo uso a la mañana y no tengo que lavarme el pelo después. Ya voy por el segundo mes y se nota más denso.",
     timeAgo: "Hace 8 horas",
@@ -38,6 +42,7 @@ const REVIEWS: Review[] = [
     name: "Agustina P.",
     initials: "AP",
     avatarColor: "#D484A8",
+    avatar: "/images/resena-mujer-3.jpeg",
     rating: 4,
     text: "Tenía la raya cada vez más ancha y me angustiaba un montón. Con un mes y medio de uso constante veo la diferencia, todavía sigo en proceso pero vale la pena.",
     timeAgo: "Hace 1 día",
@@ -47,6 +52,7 @@ const REVIEWS: Review[] = [
     name: "Rocío M.",
     initials: "RM",
     avatarColor: "#F5D0E0",
+    avatar: "/images/resena-mujer-4.jpeg",
     rating: 5,
     text: "Probé cremas, shampoos, de todo. Esto es lo primero que siento que realmente hace algo. A las 5 semanas ya se me caía notoriamente menos al peinarme.",
     timeAgo: "Hace 2 días",
@@ -117,12 +123,14 @@ export default function ReviewCarousel() {
             transition={{ duration: 0.22, ease: "easeOut" }}
             className="flex gap-3"
           >
-            <div
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-xs font-semibold text-white"
-              style={{ backgroundColor: review.avatarColor }}
-              aria-hidden="true"
-            >
-              {review.initials}
+            <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full">
+              <Image
+                src={review.avatar}
+                alt={review.name}
+                fill
+                className="object-cover"
+                sizes="44px"
+              />
             </div>
 
             <div className="min-w-0 flex-1">

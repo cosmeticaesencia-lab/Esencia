@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 type Review = {
@@ -9,6 +10,7 @@ type Review = {
   name: string;
   initials: string;
   avatarColor: string;
+  avatar: string;
   rating: number;
   text: string;
   timeAgo: string;
@@ -20,6 +22,7 @@ const REVIEWS: Review[] = [
     name: "Martín R.",
     initials: "MR",
     avatarColor: "#2D5A3D",
+    avatar: "/images/resena-hombre-1.jpeg",
     rating: 5,
     text: "Tenía entradas que me comían la cabeza. A las 3 semanas noté menos pelo en la almohada y eso ya me calmó. Lo uso todos los días sin drama.",
     timeAgo: "Hace 3 horas",
@@ -29,6 +32,7 @@ const REVIEWS: Review[] = [
     name: "Diego S.",
     initials: "DS",
     avatarColor: "#3D6B4F",
+    avatar: "/images/resena-hombre-2.jpeg",
     rating: 5,
     text: "Lo probé porque no quería quedar calvo a los 35. No deja el pelo grasoso, lo uso a la mañana y nadie se entera. Voy por el segundo mes y se ve más denso.",
     timeAgo: "Hace 8 horas",
@@ -38,6 +42,7 @@ const REVIEWS: Review[] = [
     name: "Facundo P.",
     initials: "FP",
     avatarColor: "#1B4332",
+    avatar: "/images/resena-hombre-3.jpeg",
     rating: 4,
     text: "La coronilla me preocupaba hace un año. Con un mes y medio de uso constante veo la diferencia, sigo en proceso pero vale la pena.",
     timeAgo: "Hace 1 día",
@@ -47,6 +52,7 @@ const REVIEWS: Review[] = [
     name: "Lucas M.",
     initials: "LM",
     avatarColor: "#4A7C59",
+    avatar: "/images/resena-hombre-4.jpeg",
     rating: 5,
     text: "Probé minoxidil, shampoos, de todo. Esto es lo primero que siento que funciona de verdad. A las 5 semanas se me caía mucho menos al peinarme.",
     timeAgo: "Hace 2 días",
@@ -117,12 +123,14 @@ export default function ReviewCarouselHombres() {
             transition={{ duration: 0.22, ease: "easeOut" }}
             className="flex gap-3"
           >
-            <div
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-xs font-semibold text-white"
-              style={{ backgroundColor: review.avatarColor }}
-              aria-hidden="true"
-            >
-              {review.initials}
+            <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full">
+              <Image
+                src={review.avatar}
+                alt={review.name}
+                fill
+                className="object-cover"
+                sizes="44px"
+              />
             </div>
 
             <div className="min-w-0 flex-1">
