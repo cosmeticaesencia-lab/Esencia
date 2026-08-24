@@ -11,24 +11,6 @@ export default function FooterHombres() {
           ESENCIA
         </Link>
 
-        <nav className="flex items-center gap-4 text-sm">
-          <Link
-            href="/"
-            className="text-text-muted transition-colors hover:text-[var(--h-primary-dark)]"
-          >
-            Mujeres
-          </Link>
-          <span className="text-gray-300" aria-hidden="true">
-            ·
-          </span>
-          <Link
-            href="/hombres"
-            className="font-medium text-[var(--h-primary-dark)] transition-colors hover:text-[var(--h-primary)]"
-          >
-            Hombres
-          </Link>
-        </nav>
-
         <p className="text-xs text-text-muted md:text-sm">
           © 2026 ESENCIA. Todos los derechos reservados.
         </p>
