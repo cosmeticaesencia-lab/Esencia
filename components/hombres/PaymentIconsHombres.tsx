@@ -29,7 +29,7 @@ export default function PaymentIconsHombres({
 
   return (
     <div
-      className={`flex w-full justify-center ${className}`}
+      className={`flex w-full flex-col items-center gap-1.5 ${className}`}
       aria-label="Medios de pago y envío seguro"
     >
       <div className="flex items-center gap-5 sm:gap-6">
@@ -79,6 +79,11 @@ export default function PaymentIconsHombres({
           />
         </div>
       </div>
+
+      <p className="text-center text-[10px] text-text-muted sm:text-xs">
+        Hasta 12 cuotas{" "}
+        <span className="font-semibold text-[var(--h-primary-dark)]">sin interés</span>
+      </p>
     </div>
   );
 }
