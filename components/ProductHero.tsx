@@ -17,7 +17,7 @@ const PRODUCT_IMAGES = [
   { id: 0, src: "/images/product-gallery-1.jpeg", alt: "Producto — vista frontal" },
   { id: 1, src: "/images/product-gallery-2.jpeg", alt: "Producto — vista lateral" },
   { id: 2, src: "/images/product-gallery-3.png", alt: "Producto — textura" },
-  { id: 3, src: "/images/product-4.svg", alt: "Producto — en uso" },
+  { id: 3, src: "/images/product-gallery-4.jpeg", alt: "Producto — en uso" },
   { id: 4, src: "/images/product-gallery-5.png", alt: "Producto — empaque" },
 ] as const;
 
@@ -99,7 +99,7 @@ export default function ProductHero({
             </AnimatePresence>
           </div>
 
-          <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-5 md:gap-3 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden">
+          <div className="-mx-4 flex justify-center gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] md:mx-0 md:gap-3 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden">
             {PRODUCT_IMAGES.map((image, index) => (
               <button
                 key={image.id}
@@ -107,7 +107,7 @@ export default function ProductHero({
                 onClick={() => setSelectedIndex(index)}
                 aria-label={`Ver ${image.alt}`}
                 aria-current={selectedIndex === index ? "true" : undefined}
-                className={`relative h-[4.25rem] w-[4.25rem] shrink-0 overflow-hidden rounded-lg transition-all md:aspect-square md:h-auto md:w-auto ${
+                className={`relative h-[4.25rem] w-[4.25rem] shrink-0 overflow-hidden rounded-lg transition-all sm:h-[4.75rem] sm:w-[4.75rem] md:h-20 md:w-20 ${
                   selectedIndex === index
                     ? "ring-2 ring-primary ring-offset-1 md:ring-offset-2"
                     : "opacity-70 hover:opacity-100"
