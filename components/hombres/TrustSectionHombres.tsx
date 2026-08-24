@@ -17,7 +17,7 @@ export default function TrustSectionHombres() {
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[minmax(0,42%)_minmax(0,58%)] md:gap-10 lg:gap-12">
             <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl bg-surface md:mx-0 md:max-w-none">
               <Image
-                src="/images/trust-section-placeholder.svg"
+                src="/images/trust-section-hombre.png"
                 alt="Profesional recomienda ESENCIA"
                 fill
                 className="object-cover"
