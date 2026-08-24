@@ -1,6 +1,7 @@
 "use client";
 
 import { formatPrice, type PricingOption } from "@/components/hombres/checkout-utils";
+import OfferCountdown from "@/components/OfferCountdown";
 import ProductQuickFactsHombres from "@/components/hombres/ProductQuickFactsHombres";
 import { motion } from "framer-motion";
 
@@ -124,6 +125,8 @@ export default function PricingSelectorHombres({
           );
         })}
       </div>
+
+      <OfferCountdown storageKey="esencia-offer-end-hombres" />
 
       <motion.button
         type="button"
