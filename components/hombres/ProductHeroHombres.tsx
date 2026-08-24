@@ -14,12 +14,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 const PRODUCT_IMAGES = [
-  { id: 0, src: "/images/product-1.svg", alt: "Producto — vista frontal" },
+  { id: 0, src: "/images/product-gallery-1.jpeg", alt: "Producto — vista frontal" },
   { id: 1, src: "/images/product-2.svg", alt: "Producto — vista lateral" },
-  { id: 2, src: "/images/product-3.svg", alt: "Producto — textura" },
+  { id: 2, src: "/images/product-gallery-hombre-3.jpg", alt: "Producto — textura" },
   { id: 3, src: "/images/product-4.svg", alt: "Producto — en uso" },
-  { id: 4, src: "/images/product-5.svg", alt: "Producto — empaque" },
-  { id: 5, src: "/images/product-6.svg", alt: "Producto — detalle" },
+  { id: 4, src: "/images/product-gallery-hombre-5.jpg", alt: "Producto — empaque" },
 ] as const;
 
 const BENEFITS = [
@@ -95,7 +94,7 @@ export default function ProductHeroHombres({
             />
           </motion.div>
 
-          <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-6 md:gap-3 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden">
+          <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-5 md:gap-3 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden">
             {PRODUCT_IMAGES.map((image, index) => (
               <button
                 key={image.id}
