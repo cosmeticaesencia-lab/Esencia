@@ -15,7 +15,7 @@ import { useState } from "react";
 
 const PRODUCT_IMAGES = [
   { id: 0, src: "/images/product-gallery-1.jpeg", alt: "Producto — vista frontal" },
-  { id: 1, src: "/images/product-2.svg", alt: "Producto — vista lateral" },
+  { id: 1, src: "/images/product-gallery-2.jpeg", alt: "Producto — vista lateral" },
   { id: 2, src: "/images/product-gallery-3.png", alt: "Producto — textura" },
   { id: 3, src: "/images/product-4.svg", alt: "Producto — en uso" },
   { id: 4, src: "/images/product-gallery-5.png", alt: "Producto — empaque" },

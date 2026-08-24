@@ -1,10 +1,12 @@
 export type PricingOption = {
   id: string;
   label: string;
+  subtitle?: string;
   quantity: number;
   totalPrice: number;
   badge?: string;
   freeShipping?: boolean;
+  compareAtPrice?: number;
 };
 
 export type ShippingForm = {
