@@ -1,6 +1,7 @@
 "use client";
 
 import { formatPrice, type PricingOption } from "@/components/hombres/checkout-utils";
+import ProductQuickFactsHombres from "@/components/hombres/ProductQuickFactsHombres";
 import { motion } from "framer-motion";
 
 export const PRICING_OPTIONS: PricingOption[] = [
@@ -48,6 +49,8 @@ export default function PricingSelectorHombres({
 }: PricingSelectorHombresProps) {
   return (
     <div id="pricing-section-hombres" className="flex w-full min-w-0 flex-col gap-3 md:gap-4">
+      <ProductQuickFactsHombres />
+
       <div className="flex flex-col gap-3" role="radiogroup" aria-label="Seleccionar cantidad">
         {PRICING_OPTIONS.map((option) => {
           const isSelected = selectedOption.id === option.id;

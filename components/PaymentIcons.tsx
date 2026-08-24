@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Truck } from "lucide-react";
 
 type PaymentIconsProps = {
   className?: string;
@@ -6,6 +7,7 @@ type PaymentIconsProps = {
 };
 
 const MERCADO_PAGO_LOGO = "/images/payments/mercado-pago.webp";
+const DAC_LOGO = "/images/payments/dac.png";
 
 function MercadoPagoLogo({ className }: { className?: string }) {
   return (
@@ -29,10 +31,11 @@ export default function PaymentIcons({
 
   return (
     <div
-      className={`flex flex-wrap items-center justify-center gap-4 ${className}`}
-      aria-label="Medios de pago aceptados"
+      className={`flex flex-wrap items-center justify-center gap-x-4 gap-y-2 ${className}`}
+      aria-label="Medios de pago y envío seguro"
     >
-      <svg
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        <svg
         viewBox="0 0 48 16"
         className={`${visaHeight} w-auto`}
         aria-label="Visa"
@@ -61,6 +64,21 @@ export default function PaymentIcons({
       </svg>
 
       <MercadoPagoLogo className={`${mpHeight} w-auto`} />
+      </div>
+
+      <span className="hidden h-4 w-px shrink-0 bg-gray-200 sm:block" aria-hidden="true" />
+
+      <div className="flex items-center gap-2 text-[11px] text-text-muted sm:text-xs">
+        <Truck className="h-3.5 w-3.5 shrink-0 opacity-70" strokeWidth={2} />
+        <span>Envío seguro</span>
+        <Image
+          src={DAC_LOGO}
+          alt="DAC"
+          width={120}
+          height={40}
+          className="h-5 w-auto rounded-sm object-contain"
+        />
+      </div>
     </div>
   );
 }
