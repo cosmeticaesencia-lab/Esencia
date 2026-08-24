@@ -27,7 +27,7 @@ export default function FeatureMarquee() {
       className="relative w-full overflow-hidden bg-primary py-3 text-xs font-bold uppercase tracking-wide text-white sm:py-4 sm:text-sm md:text-base md:tracking-wider"
       aria-label="Beneficios del producto"
     >
-      <div className="flex w-max animate-marquee motion-reduce:animate-none [animation-duration:36s] hover:[animation-play-state:paused]">
+      <div className="flex w-max animate-marquee motion-reduce:animate-none [animation-duration:36s]">
         <FeatureTrack />
         <div aria-hidden="true">
           <FeatureTrack />

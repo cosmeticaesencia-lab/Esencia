@@ -70,7 +70,7 @@ export default function SocialProofCarousel({
         className="relative overflow-hidden"
         aria-label="Galería de clientas satisfechas"
       >
-        <div className="flex w-max animate-marquee motion-reduce:animate-none hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee motion-reduce:animate-none">
           <ImageTrack images={images} />
           <div aria-hidden="true">
             <ImageTrack images={images} />

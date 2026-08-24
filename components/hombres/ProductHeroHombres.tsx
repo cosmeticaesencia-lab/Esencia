@@ -8,7 +8,7 @@ import PricingSelectorHombres, {
   DEFAULT_PRICING_OPTION,
 } from "@/components/hombres/PricingSelectorHombres";
 import ReviewCarouselHombres from "@/components/hombres/ReviewCarouselHombres";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -77,22 +77,27 @@ export default function ProductHeroHombres({
       <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:gap-10 lg:gap-14">
         {/* Galería */}
         <div className="flex min-w-0 flex-col gap-3 md:gap-4">
-          <motion.div
-            key={selectedImage.id}
-            initial={{ opacity: 0.6 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.25 }}
-            className="relative aspect-square w-full overflow-hidden rounded-2xl bg-surface"
-          >
-            <Image
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </motion.div>
+          <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-surface">
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={selectedImage.src}
+                initial={{ opacity: 0, scale: 1.008 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.992 }}
+                transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  fill
+                  priority={selectedIndex === 0}
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-5 md:gap-3 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden">
             {PRODUCT_IMAGES.map((image, index) => (

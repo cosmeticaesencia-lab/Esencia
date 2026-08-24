@@ -27,7 +27,7 @@ export default function AnnouncementBar() {
       className="relative overflow-hidden bg-primary py-1.5 text-[10px] font-medium uppercase tracking-wide text-white sm:py-2 sm:text-xs sm:tracking-wider"
       aria-label="Anuncios promocionales"
     >
-      <div className="group flex w-max animate-marquee motion-reduce:animate-none hover:[animation-play-state:paused]">
+      <div className="group flex w-max animate-marquee motion-reduce:animate-none">
         <MessageTrack />
         <div aria-hidden="true">
           <MessageTrack />
