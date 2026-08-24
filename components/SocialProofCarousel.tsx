@@ -8,15 +8,16 @@ export type SocialProofImage = {
 };
 
 const DEFAULT_IMAGES: SocialProofImage[] = [
-  { src: "", alt: "Cliente satisfecha 1" },
-  { src: "", alt: "Cliente satisfecha 2" },
-  { src: "", alt: "Cliente satisfecha 3" },
-  { src: "", alt: "Cliente satisfecha 4" },
-  { src: "", alt: "Cliente satisfecha 5" },
-  { src: "", alt: "Cliente satisfecha 6" },
-  { src: "", alt: "Cliente satisfecha 7" },
-  { src: "", alt: "Cliente satisfecha 8" },
-  { src: "", alt: "Cliente satisfecha 9" },
+  { src: "/images/l1.png", alt: "Cliente satisfecha 1" },
+  { src: "/images/l2.png", alt: "Cliente satisfecha 2" },
+  { src: "/images/l3.png", alt: "Cliente satisfecha 3" },
+  { src: "/images/l4.png", alt: "Cliente satisfecha 4" },
+  { src: "/images/l5.png", alt: "Cliente satisfecha 5" },
+  { src: "/images/l6.png", alt: "Cliente satisfecha 6" },
+  { src: "/images/l7.png", alt: "Cliente satisfecha 7" },
+  { src: "/images/l8.png", alt: "Cliente satisfecha 8" },
+  { src: "/images/l9.png", alt: "Cliente satisfecha 9" },
+  { src: "/images/l10.png", alt: "Cliente satisfecha 10" },
 ];
 
 type SocialProofCarouselProps = {
