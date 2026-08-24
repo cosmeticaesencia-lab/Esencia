@@ -157,7 +157,7 @@ export default function ProductHero({
             />
           </div>
 
-          <div className="flex justify-center pt-1">
+          <div className="w-full pt-1">
             <PaymentIcons />
           </div>
 
