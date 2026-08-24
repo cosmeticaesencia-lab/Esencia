@@ -1,10 +1,12 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 type DeliveryReview = {
   id: string;
   name: string;
   rating: number;
   comment: string;
+  image: string;
 };
 
 const REVIEWS: DeliveryReview[] = [
@@ -12,6 +14,7 @@ const REVIEWS: DeliveryReview[] = [
     id: "marcela",
     name: "Marcela T.",
     rating: 5,
+    image: "/images/delivery-review-1.png",
     comment:
       "Llegó rapidísimo y todo bien embalado. Ya lo empecé a usar, apenas la primera semana pero estoy con ganas de sostenerlo.",
   },
@@ -19,6 +22,7 @@ const REVIEWS: DeliveryReview[] = [
     id: "yamila",
     name: "Yamila C.",
     rating: 5,
+    image: "/images/delivery-review-2.png",
     comment:
       "Me llegó justo cuando lo necesitaba, venía con mucha caída últimamente. El envase es chiquito pero rinde bastante en cada uso.",
   },
@@ -26,6 +30,7 @@ const REVIEWS: DeliveryReview[] = [
     id: "silvina",
     name: "Silvina B.",
     rating: 4,
+    image: "/images/delivery-review-3.png",
     comment:
       "Pedí con dudas por ser compra online, pero llegó perfecto y en el tiempo que decía la página. Ahora a esperar los resultados.",
   },
@@ -33,6 +38,7 @@ const REVIEWS: DeliveryReview[] = [
     id: "karina",
     name: "Karina D.",
     rating: 5,
+    image: "/images/delivery-review-4.png",
     comment:
       "Superó mis expectativas en cuanto a presentación. Se los recomiendo a mis amigas que también están con el mismo problema.",
   },
@@ -40,6 +46,7 @@ const REVIEWS: DeliveryReview[] = [
     id: "betiana",
     name: "Betiana L.",
     rating: 5,
+    image: "/images/delivery-review-5.png",
     comment:
       "Llegó en tiempo y forma, con instrucciones claras de uso. Ya armé mi rutina diaria y espero contar buenos resultados pronto.",
   },
@@ -72,10 +79,15 @@ export default function DeliveryReviews() {
         <ul className="divide-y divide-gray-200 border-y border-gray-200">
           {REVIEWS.map((review) => (
             <li key={review.id} className="flex gap-3 py-3 md:gap-4 md:py-4">
-              <div
-                className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-gray-200 md:h-20 md:w-20"
-                aria-hidden="true"
-              />
+              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-gray-200 md:h-20 md:w-20">
+                <Image
+                  src={review.image}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="80px"
+                />
+              </div>
 
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
