@@ -1,6 +1,7 @@
 "use client";
 
 import FAQAccordion from "@/components/FAQAccordion";
+import LiveViewersBadge from "@/components/LiveViewersBadge";
 import PaymentIcons from "@/components/PaymentIcons";
 import PurchaseFlow from "@/components/checkout/PurchaseFlow";
 import type { PricingOption } from "@/components/checkout/checkout-utils";
@@ -127,11 +128,15 @@ export default function ProductHero({
 
         {/* Info del producto */}
         <div className="flex min-w-0 flex-col gap-4 md:gap-5 lg:pt-2">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
             <StarRating rating={rating} />
             <span className="text-xs text-text-muted md:text-sm">
               {rating} — {reviewCount.toLocaleString("es-AR")} reseñas
             </span>
+            <span className="hidden text-text-muted/50 sm:inline" aria-hidden="true">
+              ·
+            </span>
+            <LiveViewersBadge />
           </div>
 
           <h1 className="font-heading text-2xl font-bold leading-tight text-text md:text-4xl lg:text-[2.5rem]">

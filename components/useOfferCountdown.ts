@@ -31,9 +31,15 @@ function getEndTime(storageKey: string) {
   return createEndTime(storageKey);
 }
 
-function formatMMSS(totalSeconds: number) {
-  const minutes = Math.floor(totalSeconds / 60);
+function formatRemainingTime(totalSeconds: number) {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
+
+  if (hours > 0) {
+    return `${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  }
+
   return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
@@ -51,7 +57,7 @@ export function useOfferCountdown(storageKey: string) {
       }
 
       const remainingSeconds = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
-      setDisplay(formatMMSS(remainingSeconds));
+      setDisplay(formatRemainingTime(remainingSeconds));
     };
 
     tick();
