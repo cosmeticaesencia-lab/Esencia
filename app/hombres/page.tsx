@@ -17,7 +17,7 @@ const RESULTS_MILESTONES: TimelineMilestoneHombres[] = [
   {
     id: "month-1",
     label: "MES 1",
-    image: "/images/timeline-1.svg",
+    image: "/images/mes-hombre-1.png",
     badge: "PRIMERAS SEÑALES",
     eyebrow: "SE REPARA EL CUERO CABELLUDO",
     title: "Menos caída desde las primeras semanas",
@@ -27,7 +27,7 @@ const RESULTS_MILESTONES: TimelineMilestoneHombres[] = [
   {
     id: "month-2",
     label: "2 MESES",
-    image: "/images/timeline-2.svg",
+    image: "/images/mes-hombre-2.png",
     badge: "MÁS CRECIMIENTO",
     eyebrow: "FORTALECE LA RAÍZ",
     title: "Cabello más denso y con más volumen",
@@ -37,7 +37,7 @@ const RESULTS_MILESTONES: TimelineMilestoneHombres[] = [
   {
     id: "month-3",
     label: "3 MESES",
-    image: "/images/timeline-3.svg",
+    image: "/images/mes-hombre-3.png",
     badge: "TRANSFORMACIÓN",
     eyebrow: "RESULTADOS VISIBLES",
     title: "Un cambio que se nota y se sostiene",
