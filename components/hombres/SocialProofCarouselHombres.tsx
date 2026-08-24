@@ -8,15 +8,14 @@ export type SocialProofImageHombres = {
 };
 
 const DEFAULT_IMAGES: SocialProofImageHombres[] = [
-  { src: "", alt: "Cliente satisfecho 1" },
-  { src: "", alt: "Cliente satisfecho 2" },
-  { src: "", alt: "Cliente satisfecho 3" },
-  { src: "", alt: "Cliente satisfecho 4" },
-  { src: "", alt: "Cliente satisfecho 5" },
-  { src: "", alt: "Cliente satisfecho 6" },
-  { src: "", alt: "Cliente satisfecho 7" },
-  { src: "", alt: "Cliente satisfecho 8" },
-  { src: "", alt: "Cliente satisfecho 9" },
+  { src: "/images/cliente-1.jpeg", alt: "Cliente satisfecho 1" },
+  { src: "/images/cliente-2.jpeg", alt: "Cliente satisfecho 2" },
+  { src: "/images/cliente-3.jpeg", alt: "Cliente satisfecho 3" },
+  { src: "/images/cliente-4.jpeg", alt: "Cliente satisfecho 4" },
+  { src: "/images/cliente-5.jpeg", alt: "Cliente satisfecho 5" },
+  { src: "/images/cliente-6.jpeg", alt: "Cliente satisfecho 6" },
+  { src: "/images/cliente-7.jpeg", alt: "Cliente satisfecho 7" },
+  { src: "/images/cliente-8.jpeg", alt: "Cliente satisfecho 8" },
 ];
 
 type SocialProofCarouselHombresProps = {
