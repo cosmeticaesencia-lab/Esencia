@@ -51,6 +51,7 @@ export default function PricingSelector({
       <div className="flex flex-col gap-3" role="radiogroup" aria-label="Seleccionar cantidad">
         {PRICING_OPTIONS.map((option) => {
           const isSelected = selectedOption.id === option.id;
+          const isBundle = option.quantity > 1;
 
           return (
             <button
@@ -82,7 +83,13 @@ export default function PricingSelector({
 
               <div className="min-w-0 flex-1 pr-2">
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                  <span className="font-heading text-sm font-semibold text-text md:text-base">
+                  <span
+                    className={`font-heading ${
+                      isBundle
+                        ? "text-lg font-bold text-text md:text-xl"
+                        : "text-sm font-semibold text-text md:text-base"
+                    }`}
+                  >
                     {option.label}
                   </span>
                   {option.freeShipping && (

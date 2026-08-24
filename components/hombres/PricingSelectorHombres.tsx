@@ -51,6 +51,7 @@ export default function PricingSelectorHombres({
       <div className="flex flex-col gap-3" role="radiogroup" aria-label="Seleccionar cantidad">
         {PRICING_OPTIONS.map((option) => {
           const isSelected = selectedOption.id === option.id;
+          const isBundle = option.quantity > 1;
 
           return (
             <button
@@ -84,11 +85,17 @@ export default function PricingSelectorHombres({
 
               <div className="min-w-0 flex-1 pr-2">
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                  <span className="font-heading text-sm font-semibold text-text md:text-base">
+                  <span
+                    className={`font-heading ${
+                      isBundle
+                        ? "text-lg font-bold text-text md:text-xl"
+                        : "text-sm font-semibold text-text md:text-base"
+                    }`}
+                  >
                     {option.label}
                   </span>
                   {option.freeShipping && (
-                    <span className="rounded-full bg-[var(--h-primary)]/15 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-[var(--h-primary-dark)] md:text-[10px]">
+                    <span className="rounded-full border border-[var(--h-primary)]/30 bg-[var(--h-primary-light)] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-[var(--h-primary-dark)] md:text-[10px]">
                       Envío gratis
                     </span>
                   )}
