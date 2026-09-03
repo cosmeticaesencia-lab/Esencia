@@ -5,6 +5,15 @@ import OfferCountdown from "@/components/OfferCountdown";
 import ProductQuickFactsHombres from "@/components/hombres/ProductQuickFactsHombres";
 import { motion } from "framer-motion";
 
+export const SHOPIFY_CHECKOUT_1_SPRAY_URL =
+  "https://dq7c02-xv.myshopify.com/checkouts/cn/hWNGNx0tZMG2Yz3xTshq1uoj/es-uy?_r=AQABNUC4otoFaBlBollkYm9akm7vjh9gTP3ZZB-EftEMoe0&preview_theme_id=189891019037";
+
+export const SHOPIFY_CHECKOUT_2X1_URL =
+  "https://dq7c02-xv.myshopify.com/checkouts/cn/hWNGNxAZ7ii4KYqvM8ledzF3/es-uy?_r=AQABZTxw5xr1__dMWeZT0RVDnMq5uA-9zpyEMnLC4b9P8l0&preview_theme_id=189891019037";
+
+export const SHOPIFY_CHECKOUT_3X1_URL =
+  "https://dq7c02-xv.myshopify.com/checkouts/cn/hWNGNxE003C5jznJgpdjHtvl/es-uy?_r=AQAB-k4YU0RalsWktCkH6VjS6Wi2VGTRNM_2hmzg2t1ZLiI&preview_theme_id=189891019037";
+
 export const PRICING_OPTIONS: PricingOption[] = [
   {
     id: "1-unit",
@@ -12,6 +21,7 @@ export const PRICING_OPTIONS: PricingOption[] = [
     subtitle: "Tratamiento 1 mes",
     quantity: 1,
     totalPrice: 990,
+    checkoutUrl: SHOPIFY_CHECKOUT_1_SPRAY_URL,
   },
   {
     id: "2-units",
@@ -22,6 +32,7 @@ export const PRICING_OPTIONS: PricingOption[] = [
     compareAtPrice: 1980,
     badge: "MÁS ELEGIDO",
     freeShipping: true,
+    checkoutUrl: SHOPIFY_CHECKOUT_2X1_URL,
   },
   {
     id: "3-units",
@@ -32,6 +43,7 @@ export const PRICING_OPTIONS: PricingOption[] = [
     compareAtPrice: 2970,
     badge: "MEJOR PRECIO",
     freeShipping: true,
+    checkoutUrl: SHOPIFY_CHECKOUT_3X1_URL,
   },
 ];
 

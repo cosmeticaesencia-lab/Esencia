@@ -3,7 +3,6 @@
 import FAQAccordionHombres from "@/components/hombres/FAQAccordionHombres";
 import LiveViewersBadgeHombres from "@/components/hombres/LiveViewersBadgeHombres";
 import PaymentIconsHombres from "@/components/hombres/PaymentIconsHombres";
-import PurchaseFlowHombres from "@/components/hombres/PurchaseFlowHombres";
 import type { PricingOption } from "@/components/hombres/checkout-utils";
 import PricingSelectorHombres, {
   DEFAULT_PRICING_OPTION,
@@ -65,11 +64,11 @@ export default function ProductHeroHombres({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedOption, setSelectedOption] =
     useState<PricingOption>(DEFAULT_PRICING_OPTION);
-  const [purchaseOpen, setPurchaseOpen] = useState(false);
   const selectedImage = PRODUCT_IMAGES[selectedIndex];
 
   const handlePurchase = () => {
-    setPurchaseOpen(true);
+    if (!selectedOption.checkoutUrl) return;
+    window.location.href = selectedOption.checkoutUrl;
   };
 
   return (
@@ -172,16 +171,6 @@ export default function ProductHeroHombres({
           <FAQAccordionHombres variant="compact" />
         </div>
       </div>
-
-      <PurchaseFlowHombres
-        isOpen={purchaseOpen}
-        onClose={() => setPurchaseOpen(false)}
-        option={selectedOption}
-        product={{
-          name: PRODUCT_TITLE,
-          image: "/images/product-1.svg",
-        }}
-      />
     </section>
   );
 }

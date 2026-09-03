@@ -3,7 +3,6 @@
 import FAQAccordion from "@/components/FAQAccordion";
 import LiveViewersBadge from "@/components/LiveViewersBadge";
 import PaymentIcons from "@/components/PaymentIcons";
-import PurchaseFlow from "@/components/checkout/PurchaseFlow";
 import type { PricingOption } from "@/components/checkout/checkout-utils";
 import PricingSelector, {
   DEFAULT_PRICING_OPTION,
@@ -66,11 +65,11 @@ export default function ProductHero({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedOption, setSelectedOption] =
     useState<PricingOption>(DEFAULT_PRICING_OPTION);
-  const [purchaseOpen, setPurchaseOpen] = useState(false);
   const selectedImage = PRODUCT_IMAGES[selectedIndex];
 
   const handlePurchase = () => {
-    setPurchaseOpen(true);
+    if (!selectedOption.checkoutUrl) return;
+    window.location.href = selectedOption.checkoutUrl;
   };
 
   return (
@@ -173,16 +172,6 @@ export default function ProductHero({
           <FAQAccordion variant="compact" />
         </div>
       </div>
-
-      <PurchaseFlow
-        isOpen={purchaseOpen}
-        onClose={() => setPurchaseOpen(false)}
-        option={selectedOption}
-        product={{
-          name: PRODUCT_TITLE,
-          image: "/images/product-1.svg",
-        }}
-      />
     </section>
   );
 }

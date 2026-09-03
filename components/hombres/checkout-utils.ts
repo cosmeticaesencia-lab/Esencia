@@ -7,6 +7,7 @@ export type PricingOption = {
   badge?: string;
   freeShipping?: boolean;
   compareAtPrice?: number;
+  checkoutUrl?: string;
 };
 
 export type ShippingForm = {
