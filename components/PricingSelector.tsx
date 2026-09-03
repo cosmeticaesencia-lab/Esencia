@@ -2,6 +2,7 @@
 
 import { formatPrice, type PricingOption } from "@/components/checkout/checkout-utils";
 import OfferCountdown from "@/components/OfferCountdown";
+import CheckoutTrustBadges from "@/components/CheckoutTrustBadges";
 import ProductQuickFacts from "@/components/ProductQuickFacts";
 import { motion } from "framer-motion";
 
@@ -148,6 +149,8 @@ export default function PricingSelector({
       >
         Comprar
       </motion.button>
+
+      <CheckoutTrustBadges />
     </div>
   );
 }

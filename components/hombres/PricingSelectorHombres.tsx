@@ -2,6 +2,7 @@
 
 import { formatPrice, type PricingOption } from "@/components/hombres/checkout-utils";
 import OfferCountdown from "@/components/OfferCountdown";
+import CheckoutTrustBadges from "@/components/CheckoutTrustBadges";
 import ProductQuickFactsHombres from "@/components/hombres/ProductQuickFactsHombres";
 import { motion } from "framer-motion";
 
@@ -150,6 +151,8 @@ export default function PricingSelectorHombres({
       >
         Comprar
       </motion.button>
+
+      <CheckoutTrustBadges />
     </div>
   );
 }
