@@ -11,12 +11,13 @@ const GUIDES = [
 const THEMES = {
   mujeres: {
     container: "border-primary/25 bg-primary/10",
-    badge: "bg-primary/15 text-primary-dark",
+    badge: "rounded-full bg-primary/15 px-1.5 py-px text-primary-dark",
     accent: "text-primary-dark",
   },
   hombres: {
-    container: "border-[var(--h-primary)]/25 bg-[var(--h-primary)]/10",
-    badge: "bg-[var(--h-primary)]/15 text-[var(--h-primary-dark)]",
+    container: "border-[var(--h-primary)]/30 bg-[var(--h-primary-light)]",
+    badge:
+      "rounded border border-[var(--h-primary)]/40 bg-white px-2 py-0.5 text-[var(--h-primary-dark)]",
     accent: "text-[var(--h-primary-dark)]",
   },
 } as const;
@@ -29,7 +30,7 @@ export default function GiftGuidesBlock({ variant }: GiftGuidesBlockProps) {
       className={`w-full min-w-0 rounded-xl border px-3 py-2 sm:px-3.5 sm:py-2.5 ${theme.container}`}
     >
       <span
-        className={`inline-block rounded-full px-1.5 py-px text-[8px] font-bold uppercase tracking-wide sm:text-[9px] ${theme.badge}`}
+        className={`inline-block text-[8px] font-bold uppercase tracking-wide sm:text-[9px] ${theme.badge}`}
       >
         Incluido gratis
       </span>
