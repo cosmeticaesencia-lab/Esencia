@@ -3,6 +3,7 @@
 import { formatPrice, type PricingOption } from "@/components/hombres/checkout-utils";
 import OfferCountdown from "@/components/OfferCountdown";
 import CheckoutTrustBadges from "@/components/CheckoutTrustBadges";
+import GiftGuidesBlock from "@/components/GiftGuidesBlock";
 import ProductQuickFactsHombres from "@/components/hombres/ProductQuickFactsHombres";
 import { motion } from "framer-motion";
 
@@ -64,6 +65,8 @@ export default function PricingSelectorHombres({
   return (
     <div id="pricing-section-hombres" className="flex w-full min-w-0 flex-col gap-3 md:gap-4">
       <ProductQuickFactsHombres />
+
+      <GiftGuidesBlock variant="hombres" />
 
       <div className="flex flex-col gap-3" role="radiogroup" aria-label="Seleccionar cantidad">
         {PRICING_OPTIONS.map((option) => {
